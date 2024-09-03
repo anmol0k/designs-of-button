@@ -71,18 +71,33 @@
     }
 
     #btn-2 {
-    border-radius: 15px;
-    background-color: #cddc39;
-    color: #333;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease-in-out;
+            width: 15rem;
+            height: 3rem;
+            border-radius: 15px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            background-size: 400%;
+            animation: gradientShift 2s infinite;
+            background-image: linear-gradient(to bottom right, rgba(48, 88, 35, 0.849), rgb(2, 209, 2));
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
     }
 
     #btn-2:hover {
-        border-color: #fff;
-        box-shadow: 0 0 8px #afb42b;
+        transform: scale(1.1);
     }
-
+    @keyframes gradientShift {
+            0% {
+                background-position: bottom right;
+            }
+            50% {
+                background-position: top left;
+            }
+            100% {
+                background-position: bottom right;
+            }
+        }
     #btn-3 {
         border-radius: 15px;
         background-color: #9c27b0;
